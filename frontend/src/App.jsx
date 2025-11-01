@@ -25,6 +25,12 @@ function App() {
         }
         return response.json();
       })
+
+      .then(data => {
+        console.log('Success:', data);
+        setPrediction(data.predicted_sales);
+      })
+
       .catch(error => {
         console.error('Error:', error);
         setError(error.message);
@@ -33,7 +39,7 @@ function App() {
 
 return (
   <div>
-    <h1>Marketing AI Dashboard 🤖</h1>
+    <h1>Marketing AI Dashboard</h1>
     <p>Enter Ad Spend ($) to predict sales:</p>
     <div>
       <input type = "number" value = {spend} onChange = {e => setSpend(e.target.value)} />
