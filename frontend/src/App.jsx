@@ -6,7 +6,7 @@ function App() {
   const [prediction, setPrediction] = useState(null);
   const [error, setError] = useState(null);
 
-  const handlePredict = () => {
+   const handlePredict = () => {
     setPrediction(null);
     setError(null);
 
